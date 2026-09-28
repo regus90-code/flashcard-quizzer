@@ -1,0 +1,14 @@
+{
+  "cards": [
+    {"front": "Keyword that defines a function", "back": "def"},
+    {"front": "Built-in function that returns the length of a sequence", "back": "len"},
+    {"front": "Immutable, ordered sequence type", "back": "tuple"},
+    {"front": "Mutable key-value mapping type", "back": "dict"},
+    {"front": "Keyword that starts an exception-handling block", "back": "try"},
+    {"front": "Keyword that creates an anonymous function", "back": "lambda"},
+    {"front": "Operator for floor division", "back": "//"},
+    {"front": "Value that represents 'no value'", "back": "None"},
+    {"front": "List method that adds an item to the end", "back": "append"},
+    {"front": "What does PEP stand for?", "back": "Python Enhancement Proposal"}
+  ]
+}

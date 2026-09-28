@@ -1,0 +1,12 @@
+[
+  {"front": "DNS", "back": "Domain Name System"},
+  {"front": "HTTP", "back": "Hypertext Transfer Protocol"},
+  {"front": "SSH", "back": "Secure Shell"},
+  {"front": "TLS", "back": "Transport Layer Security"},
+  {"front": "CDN", "back": "Content Delivery Network"},
+  {"front": "VPN", "back": "Virtual Private Network"},
+  {"front": "API", "back": "Application Programming Interface"},
+  {"front": "SLA", "back": "Service Level Agreement"},
+  {"front": "RAID", "back": "Redundant Array of Independent Disks"},
+  {"front": "NAT", "back": "Network Address Translation"}
+]

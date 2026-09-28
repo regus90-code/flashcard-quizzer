@@ -1,0 +1,17 @@
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+cli.py                     82      0   100%
+data_loader.py             35      0   100%
+history.py                 39      0   100%
+main.py                     4      0   100%
+models.py                  43      0   100%
+quiz_engine.py             74      0   100%
+ui.py                      79      0   100%
+utils\__init__.py           0      0   100%
+utils\file_handler.py      41      1    98%   35
+-----------------------------------------------------
+TOTAL                     397      1    99%
+Coverage HTML written to dir htmlcov
+91 passed in 0.47s
