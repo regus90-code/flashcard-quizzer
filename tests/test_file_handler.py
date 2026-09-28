@@ -1,5 +1,7 @@
 """Tests for the JSON helpers in utils/file_handler.py."""
 
+import json
+import re
 from pathlib import Path
 
 import pytest
@@ -57,10 +59,17 @@ def test_read_reports_other_os_errors(
 
 
 def test_read_invalid_json_reports_position(tmp_path: Path) -> None:
+    broken = '{\n  "a": 1,\n}'
     path = tmp_path / "broken.json"
-    path.write_text('{\n  "a": 1,\n}', encoding="utf-8")
+    path.write_text(broken, encoding="utf-8")
+    # Python 3.13 changed where a trailing comma is reported (the comma
+    # itself instead of the closing brace), so ask the decoder for the
+    # position instead of hardcoding it.
+    with pytest.raises(json.JSONDecodeError) as decoder_error:
+        json.loads(broken)
+    position = f"line {decoder_error.value.lineno}, column {decoder_error.value.colno}"
 
-    with pytest.raises(JsonFileError, match=r"line 3, column 1"):
+    with pytest.raises(JsonFileError, match=re.escape(position)):
         read_json(path)
 
 
